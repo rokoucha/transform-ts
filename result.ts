@@ -1,4 +1,4 @@
-import { ValidationError } from './errors'
+import { ValidationError } from './errors.ts'
 
 export type ResultOk<T> = { type: 'ok'; value: T }
 export type ResultError<E> = { type: 'error'; errors: E[] }

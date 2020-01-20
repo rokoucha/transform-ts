@@ -1,7 +1,7 @@
-import { Transformer } from './transformer'
-import { ok, error } from './result'
-import { ValidationTypeError, ValidationError } from './errors'
-import { toTypeName } from './util'
+import { Transformer } from './transformer.ts'
+import { ok, error } from './result.ts'
+import { ValidationTypeError, ValidationError } from './errors.ts'
+import { toTypeName } from './util.ts'
 
 const transformerCache = new Map<unknown, Transformer<unknown, any>>()
 

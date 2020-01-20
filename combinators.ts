@@ -1,7 +1,7 @@
-import { Transformer } from './transformer'
-import { ok, error, combine, ValidationResult, isOk } from './result'
-import { ValidationTypeError, ValidationError, ValidationMemberError } from './errors'
-import { toTypeName } from './util'
+import { Transformer } from './transformer.ts'
+import { ok, error, combine, ValidationResult, isOk } from './result.ts'
+import { ValidationTypeError, ValidationError, ValidationMemberError } from './errors.ts'
+import { toTypeName } from './util.ts'
 
 export function optional<A, B>(fab: Transformer<A, B>): Transformer<A | undefined, B | undefined> {
   return Transformer.from(a => (a === undefined ? ok(undefined) : fab.transform(a)))
